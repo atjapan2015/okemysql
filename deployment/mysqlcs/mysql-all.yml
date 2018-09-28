@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql5722
+spec:
+  type: ExternalName
+  externalName: 129.157.178.84
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-secret
+type: Opaque
+data:
+  MYSQL_ROOT_PASSWORD: Welcome_123
+  MYSQL_DATABASE: world2
+  MYSQL_USER: root
+  MYSQL_PASSWORD: Welcome_123
