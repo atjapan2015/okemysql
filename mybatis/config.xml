@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE generatorConfiguration PUBLIC
+   "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+	<classPathEntry
+		location="/u01/data/workspace/k8s/lib/mysql-connector-java-8.0.12.jar" />
+	<context id="context1">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/world" userId="root"
+			password="welcome1" />
+
+		<javaModelGenerator
+			targetPackage="com.k8s.mysql.common.entity" targetProject="k8s" />
+		<sqlMapGenerator
+			targetPackage="com.k8s.mysql.common.mapper" targetProject="k8s" />
+		<javaClientGenerator
+			targetPackage="com.k8s.mysql.common.mapper" targetProject="k8s"
+			type="XMLMAPPER" />
+
+		<table tableName="city" />
+		<table tableName="country" />
+		<table tableName="countrylanguage" />
+	</context>
+</generatorConfiguration>
