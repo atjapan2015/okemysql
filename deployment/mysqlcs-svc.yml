@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: mysql5722
-spec:
-  type: ExternalName
-  externalName: 129.156.113.248
